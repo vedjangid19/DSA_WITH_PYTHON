@@ -32,6 +32,8 @@ class PriorityQueue:
         if not self.is_empty():
             data = self.start.item
             self.start = self.start.next
+
+            self.item_count -= 1
             return data
         else:
             raise IndexError("Priority Queue is empty.")
